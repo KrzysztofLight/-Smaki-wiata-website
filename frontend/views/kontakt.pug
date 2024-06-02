@@ -1,0 +1,26 @@
+extends strona.pug 
+
+block content
+    div.bg-dark.text-light(style='padding-top: 3rem; padding-bottom: 3rem; width: 100%;')
+        h1.h1.text-center(style='font-size: 3rem;') Masz jakieś pytania? Śmiało, napisz do nas i odpowiemy na twoje pytania!
+    div.bg-dark.text-light.py-4(style='display: flex; justify-content: space-between; width: 100%;')
+        div(style='width: 50%; display: flex; flex-direction: column; align-items: center; padding-top: 2rem; padding-bottom: 2rem; ')
+            form.px-4.py-3(action="http://localhost:5000/kontakt-form", method="post" style='margin: 0 auto; width: 80%')
+                .mb-3
+                    label.form-label(for='ImieNazwisko') Imie i Nazwisko
+                    input#ImieNazwisko.form-control(type='text' placeholder='Imie i Nazwisko' name='ImieNazwisko')
+                .mb-3
+                    label.form-label(for='Email') Adres E-mail
+                    input#Email.form-control(type='email' placeholder='email@przyklad.com' name='Email')
+                .mb-3
+                    textarea#Wiadomosc.form-control.no-resize(name='Wiadomosc' placeholder='Twoje pytanie' style='height: 28vh; resize: none;')
+                button.btn.btn-dark(type='submit' value="wyslij") Wyślij
+        
+                
+        div(style='width: 50%; display: flex; flex-direction: column; justify-content: center; align-items: center; border-left: 0.01rem solid #333')
+            h3.h3(style='font-size: 1.5rem;') Tu nas znajdziesz:
+            // Najdalsza wyspa od lądu: iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95567.69197813536!2d-12.361911733609563!3d-37.13521838506447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x25a3b1a1af6dc9b%3A0x69ee2d95dc98aedb!2sTristan%20da%20Cunha!5e0!3m2!1spl!2spl!4v1713013045386!5m2!1spl!2spl' width='80%' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade')
+            iframe(src='https://www.google.com/maps/d/embed?mid=15OUBq14tjeKhfd_3av5kVPllt7k&hl=en_US&ehbc=2E312F' width='80%' height='450' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade')
+
+
+
