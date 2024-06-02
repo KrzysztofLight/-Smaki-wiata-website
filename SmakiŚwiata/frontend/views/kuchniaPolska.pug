@@ -1,0 +1,21 @@
+extends strona.pug 
+
+block content
+    style.
+    .container.mt-5
+      h1.text-light.text-center Kuchnia Polska
+      p.fs-5.text-light.text-center
+        | Tradycyjna kuchnia polska jest bogata w smaki i różnorodna. Charakteryzuje się; dużym wykorzystaniem mięs, ziemniaków, kapusty oraz pieczywa.
+      .row.mt-4.py-4
+        each val in data
+          .col-md-6.mb-4
+            .card(style="display: flex; background-color: #333; color: white; border: 1px solid #444; border-radius: 10px; overflow: hidden;")
+              img.card-img-top(src=val.LinkZdjecie alt='...' style='height: 400px; object-fit: cover;')
+              .card-body
+                h5.card-title #{val.Nazwa}
+                p.card-text.card-text-1
+                  | #{val.Opis}
+                  br
+              
+
+              
