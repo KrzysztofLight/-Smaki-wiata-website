@@ -1,2 +1,2 @@
-# -Smaki-wiata-website
+# -Smaki-Świata-website
 Website about food
